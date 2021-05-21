@@ -1,0 +1,32 @@
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="idenav" mode="side">
+        <mat-nav-list class="nav-list">
+            <mat-list-item routerLink="producao">
+                <i class="material-icons">home</i>Controle
+            </mat-list-item>
+            <mat-list-item routerLink="maquinas">
+                <i class="material-icons">work</i>Maquinas
+            </mat-list-item>
+            <mat-list-item routerLink="funcionario">
+                <i class="material-icons">person_search</i>Funcionários
+            </mat-list-item>
+            <mat-list-item routerLink="traco">
+                <i class="material-icons">person_pin</i>Traço
+            </mat-list-item>
+            <mat-list-item routerLink="gastos">
+                <i class="material-icons">add_shopping_cart</i>Gastos Dia
+            </mat-list-item>
+            <mat-list-item routerLink="/">
+                <i class="material-icons">home</i>Sair
+            </mat-list-item>
+        </mat-nav-list>
+    </mat-drawer>
+  
+    <div class="sidenav-content">
+      <button mat-icon-button (click)="drawer.toggle()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </div>
+  
+  </mat-drawer-container>
